@@ -58,8 +58,8 @@
                         <color key="textColor" name="WidgetSearchFieldTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="O9q-EM-fKu">
-                        <rect key="frame" x="83.5" y="115" width="182" height="31"/>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="O9q-EM-fKu">
+                        <rect key="frame" x="83.5" y="112.5" width="182" height="33.5"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="Continue"/>
                         <constraints>
@@ -78,6 +78,12 @@
                             <action selector="mainButtonPressed:" destination="vSr-Hl-Dwm" eventType="touchUpInside" id="Wpd-N9-Sc1"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh6-Dn-ocP">
+                        <rect key="frame" x="97.5" y="120.5" width="154" height="17.5"/>
+                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
@@ -85,15 +91,19 @@
                     <constraint firstItem="DOc-rx-fwO" firstAttribute="top" secondItem="ujh-ZK-F2R" secondAttribute="bottom" constant="19" id="1wQ-6w-dfu"/>
                     <constraint firstItem="DOc-rx-fwO" firstAttribute="leading" secondItem="dCL-Gm-zeF" secondAttribute="leading" constant="18" id="5BP-ZO-mCe"/>
                     <constraint firstItem="gyk-CP-xUK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ujh-ZK-F2R" secondAttribute="trailing" id="5Bz-sH-cLL"/>
+                    <constraint firstItem="Eh6-Dn-ocP" firstAttribute="trailing" secondItem="O9q-EM-fKu" secondAttribute="trailing" constant="-14" id="6qP-hc-P9b"/>
                     <constraint firstItem="O9q-EM-fKu" firstAttribute="top" secondItem="wYF-k7-j8C" secondAttribute="bottom" constant="16" id="APv-mm-IGQ"/>
                     <constraint firstItem="ujh-ZK-F2R" firstAttribute="centerX" secondItem="dCL-Gm-zeF" secondAttribute="centerX" id="BGx-O0-XiH"/>
+                    <constraint firstItem="O9q-EM-fKu" firstAttribute="leading" secondItem="Eh6-Dn-ocP" secondAttribute="leading" constant="-14" id="CZR-FE-ZXt"/>
                     <constraint firstItem="gyk-CP-xUK" firstAttribute="top" secondItem="dCL-Gm-zeF" secondAttribute="top" id="IJi-KN-HVe"/>
                     <constraint firstItem="wYF-k7-j8C" firstAttribute="top" secondItem="DOc-rx-fwO" secondAttribute="bottom" constant="6" id="KU8-zY-XfP"/>
                     <constraint firstItem="O9q-EM-fKu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dCL-Gm-zeF" secondAttribute="leading" constant="16" id="Lhf-vT-Ri6"/>
+                    <constraint firstItem="Eh6-Dn-ocP" firstAttribute="height" secondItem="O9q-EM-fKu" secondAttribute="height" constant="-16" id="Tsu-p0-ZwL"/>
                     <constraint firstItem="ujh-ZK-F2R" firstAttribute="top" secondItem="dCL-Gm-zeF" secondAttribute="top" constant="16" id="WXp-hT-1E5"/>
                     <constraint firstItem="O9q-EM-fKu" firstAttribute="centerX" secondItem="dCL-Gm-zeF" secondAttribute="centerX" id="Xql-wa-Hni"/>
                     <constraint firstAttribute="bottom" secondItem="O9q-EM-fKu" secondAttribute="bottom" constant="24" id="Y7F-K5-S08"/>
                     <constraint firstAttribute="trailing" secondItem="wYF-k7-j8C" secondAttribute="trailing" constant="8" id="aHI-aS-0qE"/>
+                    <constraint firstItem="Eh6-Dn-ocP" firstAttribute="centerY" secondItem="O9q-EM-fKu" secondAttribute="centerY" id="eow-ea-V8w"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O9q-EM-fKu" secondAttribute="trailing" constant="16" id="gh2-Df-KlH"/>
                     <constraint firstAttribute="trailing" secondItem="gyk-CP-xUK" secondAttribute="trailing" id="lUk-8s-lVO"/>
                     <constraint firstItem="ujh-ZK-F2R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dCL-Gm-zeF" secondAttribute="leading" constant="8" id="oBm-gr-yQr"/>
@@ -105,6 +115,7 @@
                 <outlet property="dismissButton" destination="gyk-CP-xUK" id="TuK-VU-6J4"/>
                 <outlet property="headerLabel" destination="DOc-rx-fwO" id="0F6-H6-Lwj"/>
                 <outlet property="mainButton" destination="O9q-EM-fKu" id="ezF-0W-yjZ"/>
+                <outlet property="sizingLabel" destination="Eh6-Dn-ocP" id="Tmj-bW-463"/>
                 <outlet property="subheaderLabel" destination="wYF-k7-j8C" id="bkE-a2-JUA"/>
                 <outlet property="topLabel" destination="ujh-ZK-F2R" id="kix-G8-0Cy"/>
             </connections>

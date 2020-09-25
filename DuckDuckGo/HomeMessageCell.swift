@@ -38,12 +38,15 @@ class HomeMessageCell: UICollectionViewCell {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var subheaderLabel: UILabel!
+    @IBOutlet weak var sizingLabel: UILabel!
     private lazy var cellWidthConstraint = widthAnchor.constraint(equalToConstant: HomeMessageCell.maximumWidth)
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         cellWidthConstraint.isActive = true
+        
+        mainButton.titleLabel?.textAlignment = .center
         
         let image = dismissButton.image(for: .normal)?.withRenderingMode(.alwaysTemplate)
         dismissButton.setImage(image, for: .normal)
@@ -70,11 +73,9 @@ class HomeMessageCell: UICollectionViewCell {
         subheaderLabel.text = model.subheader
         topLabel.text = model.topText
         
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = .center
-        paragraph.lineBreakMode = .byWordWrapping
-        let buttonText = NSAttributedString(string: model.buttonText, attributes: [.paragraphStyle: paragraph])
-        mainButton.setAttributedTitle(buttonText, for: .normal)
+        sizingLabel.font = mainButton.titleLabel?.font
+        sizingLabel.text = model.buttonText
+        mainButton.setTitle(model.buttonText, for: .normal)
     }
     
     func setWidth(_ width: CGFloat) {
