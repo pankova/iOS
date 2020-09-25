@@ -76,6 +76,7 @@ class HomeMessageCell: UICollectionViewCell {
         sizingLabel.font = mainButton.titleLabel?.font
         sizingLabel.text = model.buttonText
         mainButton.setTitle(model.buttonText, for: .normal)
+        layoutIfNeeded()
     }
     
     func setWidth(_ width: CGFloat) {
